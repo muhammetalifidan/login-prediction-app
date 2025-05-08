@@ -1,12 +1,44 @@
-# React + Vite
+# Kullanıcı Oturum Tahmin Sistemi - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu dizin, Kullanıcı Oturum Tahmin Sistemi projesinin frontend uygulamasını içermektedir. Frontend, React kullanılarak geliştirilmiştir ve backend'den alınan kullanıcı oturum tahminlerini kullanıcı dostu bir arayüzde görüntüler.
 
-Currently, two official plugins are available:
+**Teknolojiler:**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* React
+* npm
 
-## Expanding the ESLint configuration
+**Kurulum:**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  Frontend dizinine gidin:
+    ```bash
+    cd frontend
+    ```
+2.  npm bağımlılıklarını yükleyin:
+    ```bash
+    npm install
+    ```
+
+**Çalıştırma:**
+
+1.  Uygulamayı geliştirme modunda başlatın:
+    ```bash
+    npm run dev
+    ```
+    Bu komut genellikle uygulamayı varsayılan olarak `http://localhost:5174` adresinde başlatır.
+
+**API İletişimi:**
+
+Frontend uygulaması, backend API'sine istek atmak için Axios kullanmaktadır. Tahmin verileri aşağıdaki backend endpoint'inden çekilir:
+
+* [https://login-prediction-app.onrender.com/api/predictions](https://login-prediction-app.onrender.com/api/predictions)
+
+**Canlı Ortam:**
+
+Frontend uygulaması aşağıdaki adreste yayındadır:
+
+* [https://login-prediction.netlify.app/](https://login-prediction.netlify.app/)
+
+**Özellikler:**
+
+* Her kullanıcı için son login zamanını gösterir.
+* Her algoritma için tahmin edilen bir sonraki login zamanını karşılaştırmalı bir tablo şeklinde sunar.
